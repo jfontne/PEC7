@@ -1,0 +1,54 @@
+<h2>register</h2>
+
+<div class="form-group">
+  <form (ngSubmit)="createUSR()" [formGroup]="userForm" >
+        <div class="entrada">
+            <div class="etiqueta"><label for="username">username</label></div>
+            <div class="quadreText">
+                <input type="text"
+                    id="username"
+                    placeholder=""
+                    name="username"
+                    formControlName="username"
+                    >
+            </div>
+            <!-- Tractament errors username -->
+                <div *ngIf="userForm.get('username')?.dirty">
+                    <div class="error" *ngIf="userForm.get('username')?.hasError('required')">
+                        username obligatorio
+                    </div>
+                </div>
+        </div>
+        
+        
+        <div class="entrada">
+            <div class="etiqueta"><label for="password">password</label></div>
+            <div class="quadreText">
+                <input type="password"
+                    id="password"
+                    placeholder=""
+                    name="password"
+                    formControlName="password"
+                    >
+            </div>
+            <!-- Tractament errors password -->
+            <div *ngIf="userForm.get('password')?.dirty">
+                <div class="error" *ngIf="userForm.get('password')?.hasError('required')">
+                    password obligatorio
+                </div>
+                <div class="error" *ngIf="userForm.get('password')?.hasError('min')">
+                    mínimo de 4 carácteres
+                </div>
+            </div>
+                
+        </div>
+            
+        <div class="entrada">
+            <button
+            type="submit"
+            [disabled] = !userForm.valid 
+            >creación</button>
+        </div>
+  </form>
+</div>
+

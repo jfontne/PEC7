@@ -1,0 +1,54 @@
+
+<div class="form-group">
+<h2>login</h2>
+<h3>{{message}}</h3>
+  <form (ngSubmit)="loginUSR()" [formGroup]="userForm" >
+        <div class="entrada">
+            <div class="etiqueta"><label for="username">username</label></div>
+            <div class="quadreText">
+                <input type="text"
+                    id="username"
+                    placeholder=""
+                    name="username"
+                    formControlName="username"
+                    >
+            </div>
+            <!-- Tractament errors username -->
+                <div *ngIf="userForm.get('username')?.dirty">
+                    <div class="error" *ngIf="userForm.get('username')?.hasError('required')">
+                        username obligatorio
+                    </div>
+                </div>
+        </div>
+        
+        
+        <div class="entrada">
+            <div class="etiqueta"><label for="password">password</label></div>
+            <div class="quadreText">
+                <input type="password"
+                    id="password"
+                    placeholder=""
+                    name="password"
+                    formControlName="password"
+                    >
+            </div>
+            <!-- Tractament errors password -->
+            <div *ngIf="userForm.get('password')?.dirty">
+                <div class="error" *ngIf="userForm.get('password')?.hasError('required')">
+                    password obligatorio
+                </div>
+                <div class="error" *ngIf="userForm.get('password')?.hasError('min')">
+                    Mínimo de 4 carácteres
+                </div>
+            </div>
+                
+        </div>
+            
+        <div class="entrada">
+            <button
+            type="submit"
+            [disabled] = !userForm.valid 
+            >login</button>
+        </div>
+  </form>
+</div>
