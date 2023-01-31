@@ -1,0 +1,30 @@
+.encap{
+    background-color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+a{
+    text-decoration-line: none;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}.titol{
+    font-size: 2rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    list-style-type:none;
+}
+.opcio{
+    margin: 15px;
+}
+.actiu{
+    text-decoration: underline solid cyan 3px;
+
+}
