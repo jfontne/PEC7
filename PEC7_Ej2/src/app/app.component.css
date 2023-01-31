@@ -11,6 +11,7 @@ a{
     color:white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }.titol{
+    padding-top: 10px;
     font-size: 2rem;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -27,4 +28,13 @@ a{
 .actiu{
     text-decoration: underline solid cyan 3px;
 
+}
+
+/*pantalles fins a 700px*/
+@media screen and (max-width: 700px) {
+    .encap{
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
