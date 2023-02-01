@@ -1,0 +1,40 @@
+.encap{
+    background-color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+a{
+    text-decoration-line: none;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}.titol{
+    padding-top: 10px;
+    font-size: 2rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    list-style-type:none;
+}
+.opcio{
+    margin: 15px;
+}
+.actiu{
+    text-decoration: underline solid cyan 3px;
+
+}
+
+/*pantalles fins a 700px*/
+@media screen and (max-width: 700px) {
+    .encap{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}

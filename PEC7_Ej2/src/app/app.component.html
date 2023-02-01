@@ -3,7 +3,7 @@
     VINOTECA
   </H1>
   <ul class="menu">
-  <li class="opcio">
+  <li *ngIf="userS.token===null" class="opcio">
     <a routerLink="login" routerLinkActive="actiu" >login</a>
   </li>
   <li class="opcio">

@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.enVenda{
+    background-color: aquamarine;
+}
+.noDisponible{
+    color: white;
+    background-color: red;
+}
+
+.fitxa{
+    padding: 15px;
+    max-width: 800px;
+    border-radius: 25px;
+    border-color: gray;
+    border-style: solid;
+    border-width: 2px;
+    display: flex;
+    flex-direction: row;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+li{
+    list-style-type: none;
+    padding: 5px;
+}
+img{
+    width: 300px;
+}
+
+
+
+

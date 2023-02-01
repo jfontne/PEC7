@@ -1,0 +1,31 @@
+<div class="container">
+
+<h1>WINE DETAILS</h1>
+<div class="fitxa">
+    
+    <div class="esq">
+        <h2>{{wine.name}}</h2>
+        <ul>
+            <li>id: {{wine.id}}</li>
+            <li>name: {{wine.name}}</li>
+            <li>price: {{wine.price|price}}</li>
+            <li>Is on sale: <span class="{{wine.isOnSale? 'enVenda' : 'noDisponible'}}">{{wine.isOnSale|siNo}}</span></li>
+            <li>Quantity in Cart: {{wine.quantityInCart}}</li>
+            <li>Total: {{wine.price * wine.quantityInCart|price}}</li>
+            <li>Food Pairing
+                <ul>
+                    <li *ngFor="let food of wine.foodPairing">
+                        name: {{food.name}}
+                        / kcal: {{food.kcal}}
+                        / vegan: {{food.vegan|siNo}}
+                        / gluten: {{food.gluten|siNo}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="der">
+        <img class="miniatura" src="{{wine.imageUrl | defaultImageURL}}" alt='{{wine.name}}'>
+    </div>
+</div>
+</div>

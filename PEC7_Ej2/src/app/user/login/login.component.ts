@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ValidationErrors } from '@angular/forms';
 import { Validators, FormBuilder } from '@angular/forms';
 import { UserServiceService } from 'src/app/services/user-service.service';
+import { UserStoreServiceService } from 'src/app/services/user-store-service.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent {
 public message:string = ''; 
 public userForm: FormGroup;
 
-constructor(private fb:FormBuilder, private userS:UserServiceService){
+constructor(private fb:FormBuilder, private userS:UserServiceService, public usrStore:UserStoreServiceService){
   this.userForm = this.fb.group({             
     username: [null, [Validators.required]],         
     password: [null, [Validators.required, Validators.minLength(4)]],

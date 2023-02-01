@@ -1,0 +1,20 @@
+<div class="encap">
+  <H1 class="titol">
+    VINOTECA
+  </H1>
+  <ul class="menu">
+  <li *ngIf="userS.token===null" class="opcio">
+    <a routerLink="user/login" routerLinkActive="actiu" >login</a>
+  </li>
+  <li class="opcio">
+    <a routerLink="user/register" routerLinkActive="actiu" >register</a>
+  </li>
+  <li class="opcio">
+    <a routerLink="wine/list" routerLinkActive="actiu" >win list</a>
+  </li>
+  <li class="opcio">
+    <a routerLink="wine/create" routerLinkActive="actiu" >create wine</a>
+  </li>
+</ul>
+</div>
+  <router-outlet></router-outlet>

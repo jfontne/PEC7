@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
-import { WinelistComponent } from 'wines/winelist/winelist.component';
-import { WineNewComponent } from 'wines/wine-new/wine-new.component';
-import { WineDetailComponent } from '../../wines/wine-detail/wine-detail.component';
+import { WinelistComponent } from 'src/wines/winelist/winelist.component';
+import { WineNewComponent } from 'src/wines/wine-new/wine-new.component';
+import { WineDetailComponent } from '../wines/wine-detail/wine-detail.component';
 import { UserLoginGuard } from './guards/user-login.guard';
 
 const appRoutes: Routes = [   
