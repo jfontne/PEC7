@@ -13,13 +13,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    WineNewComponent,
-    WineitemComponent,
-    WineDetailComponent,
-    WinelistComponent,
-    DefaultImageURLPipe,
-    PricePipe,
-    SiNoPipe
   ],
   imports: [
     CommonModule,

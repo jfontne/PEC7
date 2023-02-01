@@ -26,6 +26,7 @@ constructor(private fb:FormBuilder, private wineS: WineServiceService){
 }
 createWine() {
   let valors = this.wineForm.value;
+  this.wineForm.reset();
   let Nwine:Wine = {id: 0,name: valors.name,imageUrl: `assets/images/${valors.imageURL}`, price: valors.price, isOnSale: valors.isOnSale, quantityInCart: 0, total: valors.price, foodPairing: []}
   console.log(Nwine);
   this.wineS.create(Nwine).subscribe(

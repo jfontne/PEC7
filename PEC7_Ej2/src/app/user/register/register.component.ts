@@ -22,6 +22,7 @@ constructor(private fb:FormBuilder, private userS:UserServiceService){
 createUSR() {
   console.log(this.userForm.value);
   this.userS.registerUsr(this.userForm.value).subscribe((res:any)=>{
+    this.userForm.reset();
     this.msg = res.msg;
   },(err)=>{
     this.msg = err.error.msg;

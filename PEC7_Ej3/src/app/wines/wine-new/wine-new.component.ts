@@ -27,14 +27,12 @@ constructor(private fb:FormBuilder, private wineS: WineServiceService){
 createWine() {
   let valors = this.wineForm.value;
   let Nwine:Wine = {id: 0,name: valors.name,imageUrl: `assets/images/${valors.imageURL}`, price: valors.price, isOnSale: valors.isOnSale, quantityInCart: 0, total: valors.price, foodPairing: []}
-  console.log(Nwine);
+  this.wineForm.reset();
   this.wineS.create(Nwine).subscribe(
     (res:any)=>{
-      this.missatge=res.msg},
+      this.missatge='Vino Creado correctamente';
+      },
     (err)=>{
-      this.missatge = err.error.msg})
-}
-
-
-
+      this.missatge = 'Error'})
+    }
 }
